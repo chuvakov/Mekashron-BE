@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Connected Services\Mekashron\**" />
+    <Compile Remove="Connected Services\ServiceReference1\**" />
+    <Content Remove="Connected Services\Mekashron\**" />
+    <Content Remove="Connected Services\ServiceReference1\**" />
+    <EmbeddedResource Remove="Connected Services\Mekashron\**" />
+    <EmbeddedResource Remove="Connected Services\ServiceReference1\**" />
+    <None Remove="Connected Services\Mekashron\**" />
+    <None Remove="Connected Services\ServiceReference1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.*" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="4.8.*" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.8.*" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.*" />
+    <PackageReference Include="System.ServiceModel.Security" Version="4.8.*" />
+  </ItemGroup>
+
+</Project>
